@@ -41,7 +41,7 @@ if text_input:
     with st.spinner('Translating...'):
 
         translator = Translator(service_urls=['translate.google.com'])
-        
+        device = torch.device("cpu")
         # input_lang, output_lang, pairs = prepareData('eng', 'rus', False)
 
         #st.write("You entered: ", text_input)

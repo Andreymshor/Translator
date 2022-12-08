@@ -13,7 +13,7 @@ from torch import optim
 import torch.nn.functional as F
 import time
 import math
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
 
 import matplotlib.pyplot as plt
 plt.switch_backend('agg')
