@@ -49,10 +49,10 @@ if text_input:
         result = translator.translate(text_input.lower(), src='en', dest='ru').text
         #print(result)
         encoder2 = EncoderRNN(input_lang.n_words, hidden_size).to(device)
-        encoder2.load_state_dict(torch.load('results/encoder_1000000'))
+        encoder2.load_state_dict(torch.load('results/encoder_1000000', map_location='cpu'))
 
         attn_decoder2 = AttnDecoderRNN(hidden_size, output_lang.n_words).to(device)
-        attn_decoder2.load_state_dict(torch.load('results/decoder_1000000'))
+        attn_decoder2.load_state_dict(torch.load('results/decoder_1000000', map_location='cpu'))
         decoded_words = evaluateAndShowAttention(encoder2, attn_decoder2, input_sentence=text_input.lower(), input_lang=input_lang, output_lang=output_lang)
         st.subheader(f"Using Translate:\n             {result}")
         st.subheader(f"Using Seq2Seq:\n               {decoded_words}")
