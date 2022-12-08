@@ -122,7 +122,6 @@ spacy==3.3.0
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.3.0/en_core_web_sm-3.3.0.tar.gz#egg=en_core_web_sm
 srsly==2.4.3
 stack-data==0.2.0
-streamlit==1.15.2
 SudachiDict-core==20221021
 SudachiPy==0.6.6
 tenacity==8.0.1
